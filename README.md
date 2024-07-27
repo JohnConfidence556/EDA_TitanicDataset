@@ -43,3 +43,20 @@ https://www.kaggle.com/datasets/yasserh/titanic-dataset/data
 14. find the name and age of the youngest female passenger who survived in third class
 15. find the number of male and female passenger 
 16. Select all passenger who travelled in a cabin that was not shared by other passenger
+
+
+## Data Analysis
+
+``` SQL
+
+    SELECT 
+	Name,
+    Age,
+    Fare
+FROM titanic_dataset
+WHERE Age = (
+
+			SELECT MAX(Age) AS oldest_age
+			FROM titanic_dataset
+			WHERE Survived = 1 )
+```
