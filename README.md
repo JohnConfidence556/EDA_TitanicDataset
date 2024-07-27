@@ -60,3 +60,5 @@ WHERE Age = (
 			FROM titanic_dataset
 			WHERE Survived = 1 )
 ```
+
+## Conclusions
